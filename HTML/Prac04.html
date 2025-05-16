@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Spriting for performance</title>
+    <style>
+      h3 {
+        text-align: center;
+        color: #333;
+        border: 3px solid #131416;
+      }
+      .box {
+        background-color: #f79a9a;
+        color: #0b63d6;
+        border: 3px solid #131416;
+      }
+      .emp {
+        width: 150px;
+        height: 140px;
+        background-image: url("http://127.0.0.1:3000/HTML/combined.png");
+        background-position: -236px -7px;
+        background-repeat: no-repeat;
+      }
+      .emp1 {
+        background-position: -236px -7px;
+      }
+      .emp2 {
+        background-position: -410px -7px;
+      }
+      .emp3 {
+        background-position: -12px -7px;
+      }
+      .emp4 {
+        background-position: -236px -7px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="ed">Employee Details</h3>
+    <div class="box box1">
+      <div>
+        <span>Employee Name: John Doe</span>
+      </div>
+      <div><span> Employee ID: 123456 </span></div>
+      <div><span>Department: IT</span></div>
+      <div class="emp1 emp"></div>
+    </div>
+    <div class="box box2">
+      <div>
+        <span>Employee Name: Jane Smith</span>
+      </div>
+      <div><span> Employee ID: 654321 </span></div>
+      <div><span>Department: HR</span></div>
+      <div class="emp2 emp"></div>
+    </div>
+    <div class="box box3">
+      <div>
+        <span>Employee Name: Alice Johnson</span>
+      </div>
+      <div><span> Employee ID: 789012 </span></div>
+      <div><span>Department: Finance</span></div>
+      <div class="emp3 emp"></div>
+    </div>
+    <div class="box box4">
+      <div>
+        <span>Employee Name: Bob Brown</span>
+      </div>
+      <div><span> Employee ID: 345678 </span></div>
+      <div><span>Department: Marketing</span></div>
+      <div class="emp4 emp"></div>
+    </div>
+  </body>
+</html>
