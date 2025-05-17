@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pseudo-class Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px;
+    }
+
+    /* :hover */
+    .hover-box {
+      background-color: #444;
+      padding: 20px;
+      width: 200px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+    }
+    .hover-box:hover {
+      background-color: #666;
+    }
+
+    /* :active */
+    button:active {
+      background-color: green;
+      color: white;
+    }
+
+    /* :focus */
+    input:focus {
+      border: 2px solid gold;
+      outline: none;
+    }
+
+    /* :visited and :link */
+    a:link {
+      color: lightblue;
+    }
+    a:visited {
+      color: purple;
+    }
+
+    /* :first-child and :last-child */
+    ul li:first-child {
+      color: yellow;
+    }
+    ul li:last-child {
+      color: orange;
+    }
+
+    /* :nth-child(n) */
+    ul li:nth-child(2) {
+      color: cyan;
+    }
+
+    /* :not() */
+    ul li:not(:first-child) {
+      font-style: italic;
+    }
+
+    /* :checked */
+    input[type="checkbox"]:checked + label {
+      color: lime;
+      font-weight: bold;
+    }
+
+    /* :enabled and :disabled */
+    input:enabled {
+      background-color: #222;
+      color: white;
+    }
+    input:disabled {
+      background-color: gray;
+      color: darkgray;
+    }
+
+    /* :empty */
+    p:empty {
+      border: 2px dashed red;
+      height: 40px;
+    }
+
+    /* :nth-of-type */
+    .cards p:nth-of-type(2) {
+      background-color: teal;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-class Practice</h2>
+
+  <!-- :hover -->
+  <div class="hover-box">Hover over me</div>
+
+  <!-- :active -->
+  <button>Click me (active)</button>
+
+  <!-- :focus -->
+  <div>
+    <input type="text" placeholder="Focus me" />
+  </div>
+
+  <!-- :link and :visited -->
+  <div>
+    <a href="https://example.com" target="_blank">Visit Example</a>
+  </div>
+
+  <!-- :first-child, :last-child, :nth-child, :not() -->
+  <ul>
+    <li>Item 1 (first)</li>
+    <li>Item 2 (nth-child)</li>
+    <li>Item 3</li>
+    <li>Item 4 (last)</li>
+  </ul>
+
+  <!-- :checked -->
+  <div>
+    <input type="checkbox" id="agree" />
+    <label for="agree">I agree</label>
+  </div>
+
+  <!-- :enabled and :disabled -->
+  <div>
+    <input type="text" placeholder="Enabled input" />
+    <input type="text" placeholder="Disabled input" disabled />
+  </div>
+
+  <!-- :empty -->
+  <p></p>
+
+  <!-- :nth-of-type -->
+  <div class="cards">
+    <p>Paragraph 1</p>
+    <p>Paragraph 2 (2nd of type)</p>
+    <p>Paragraph 3</p>
+  </div>
+
+</body>
+</html>

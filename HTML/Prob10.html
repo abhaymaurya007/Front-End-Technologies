@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pseudo-elements + Attribute Selectors</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* ::before and ::after */
+    .pseudo-box::before {
+      content: "👉 ";
+      color: gold;
+    }
+    .pseudo-box::after {
+      content: " ✔️";
+      color: lightgreen;
+    }
+    .pseudo-box {
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #333;
+    }
+
+    /* ::first-letter */
+    .intro::first-letter {
+      font-size: 2em;
+      color: tomato;
+      font-weight: bold;
+    }
+
+    /* ::first-line */
+    .intro::first-line {
+      color: lightblue;
+    }
+
+    /* ::selection */
+    ::selection {
+      background-color: darkorange;
+      color: white;
+    }
+
+    /* ::marker (for list item bullets) */
+    ul.markers li::marker {
+      color: lime;
+      font-size: 1.2em;
+    }
+
+    /* ::placeholder (form element) */
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+
+    /* ---------- Attribute Selectors + Pseudo-elements ---------- */
+
+    /* ::before for attribute-based styling */
+    p[type="political"]::before {
+      content: "🏛️ ";
+      color: gold;
+      font-weight: bold;
+    }
+
+    p[type="education"]::before {
+      content: "🎓 ";
+      color: skyblue;
+    }
+
+    p[type="entertainment"]::before {
+      content: "🎬 ";
+      color: pink;
+    }
+
+    /* Style all paragraphs with a custom type attribute */
+    p[type] {
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #333;
+      border-left: 4px solid white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-elements Practice</h2>
+
+  <!-- ::before and ::after -->
+  <div class="pseudo-box">This uses ::before and ::after</div>
+
+  <!-- ::first-letter and ::first-line -->
+  <p class="intro">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur lorem id arcu blandit, eget porttitor mi commodo. Fusce nec lorem at lacus tempor blandit.
+  </p>
+
+  <!-- ::selection -->
+  <p>Select this text to see the ::selection effect.</p>
+
+  <!-- ::marker -->
+  <ul class="markers">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <!-- ::placeholder -->
+  <input type="text" placeholder="Enter your name..." />
+
+  <h2>Attribute Selectors with Pseudo-elements</h2>
+
+  <p type="political">This paragraph is about political topics.</p>
+  <p type="education">This paragraph discusses education and learning.</p>
+  <p type="entertainment">This paragraph covers movies and entertainment news.</p>
+
+</body>
+</html>
