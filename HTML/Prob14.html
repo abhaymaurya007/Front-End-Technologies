@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postion Tag in CSS</title>
+    <style>
+      .box {
+        border: 2px solid black;
+        margin: 3px;
+        height: 150px;
+        width: 150px;
+      }
+      .box1 {
+        background-color: aqua;
+      }
+      .box2 {
+        background-color: rgb(196, 36, 161);
+      }
+      .box3 {
+        background-color: rgb(49, 18, 186);
+        /* relative from old first position */
+        /* position: relative;
+        left: 100px;
+        top: 100px; */
+      }
+      .box4 {
+        background-color: rgb(27, 215, 24);
+        /* from parent relative or from body tag */
+        /* position: absolute;
+        left: 100px;
+        top: 100px; */
+      }
+      .box5 {
+        background-color: rgb(224, 96, 10);
+      }
+      /* postion-absolute,Relative,Static,Fixed,Sticky */
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+
+    <!-- Positiion absolute : 
+    1. Its not holding space withing x,y axis
+    2. it always moves relative to parent position
+    3. only depends on the parent whose position is non-static
+    4. If the parent position is static , will try check for grand parent position
+    5. and keep traceling to all parent until it finds a parent/grantparent with position non static , depend the body element 
+    
+    -->
+  </body>
+</html>
